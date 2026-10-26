@@ -1,0 +1,149 @@
+.welcome_page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #080808;
+  color: white;
+}
+
+.welcome_background {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, #080808 5%, rgba(0, 0, 0, 0.48) 65%, #080808 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent),
+    url("https://image.tmdb.org/t/p/original/9faGSFi5jam6pDWGNd0p8JcJgXQ.jpg")
+      center / cover;
+  opacity: 0.85;
+}
+
+.welcome_header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 5%;
+}
+
+.welcome_header img {
+  width: 145px;
+  height: auto;
+}
+
+.welcome_signin {
+  padding: 10px 19px;
+  background: #e50914;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.welcome_content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 100px auto 0;
+  padding: 30px 24px 90px;
+  text-align: center;
+}
+
+.welcome_content h1 {
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 22px;
+}
+
+.welcome_content h2 {
+  font-size: clamp(19px, 2.5vw, 27px);
+  margin-bottom: 24px;
+}
+
+.welcome_content p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.welcome_form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px auto 20px;
+  max-width: 650px;
+}
+
+.welcome_form input {
+  flex: 1;
+  min-width: 0;
+  padding: 17px;
+  color: white;
+  background: rgba(25, 25, 25, 0.85);
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.welcome_form button {
+  padding: 15px 22px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.welcome_form button:hover,
+.welcome_signin:hover {
+  background: #bd0811;
+}
+
+.welcome_actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.welcome_actions a {
+  color: white;
+  padding: 11px 18px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.welcome_actions a:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+  .welcome_header {
+    padding: 20px;
+  }
+
+  .welcome_header img {
+    width: 105px;
+  }
+
+  .welcome_content {
+    margin-top: 65px;
+    padding: 20px 18px 55px;
+  }
+
+  .welcome_form {
+    flex-direction: column;
+  }
+
+  .welcome_form button {
+    width: 100%;
+  }
+
+  .welcome_actions {
+    flex-wrap: wrap;
+  }
+}

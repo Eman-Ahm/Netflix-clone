@@ -1,0 +1,154 @@
+/* ==============================
+   MOVIE ROW SECTION
+============================== */
+
+.row {
+  width: 100%;
+  margin: 0 0 48px;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Extra space before the first movie row */
+.gap > .row:first-child {
+  margin-top: 0;
+}
+
+/* ==============================
+   MOVIE CATEGORY TITLE
+============================== */
+
+.row_title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 18px 30px;
+  padding: 0;
+
+  color: #ffffff;
+}
+
+/* ==============================
+   HORIZONTAL MOVIE POSTERS
+============================== */
+
+.row_posters {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 6px 30px 18px;
+  gap: 12px;
+
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==============================
+   NORMAL MOVIE POSTERS
+============================== */
+
+.row_poster {
+  display: block;
+  flex-shrink: 0;
+
+  max-height: 120px;
+  width: auto;
+
+  object-fit: cover;
+  margin: 0;
+
+  border-radius: 5px;
+  cursor: pointer;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.row_poster:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* ==============================
+   LARGE POSTERS
+============================== */
+
+.row_posterLarge {
+  max-height: 250px;
+}
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media (max-width: 768px) {
+  .row {
+    margin-bottom: 38px;
+  }
+
+  .row_title {
+    font-size: 1.35rem;
+    margin-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  .row_posters {
+    padding: 5px 20px 14px;
+    gap: 10px;
+  }
+
+  .row_poster {
+    max-height: 100px;
+  }
+
+  .row_posterLarge {
+    max-height: 180px;
+  }
+}
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 480px) {
+  .row {
+    margin-bottom: 32px;
+  }
+
+  .row_title {
+    font-size: 1.15rem;
+    margin-left: 15px;
+    margin-bottom: 12px;
+  }
+
+  .row_posters {
+    padding: 5px 15px 12px;
+    gap: 8px;
+  }
+
+  .row_poster {
+    max-height: 85px;
+    border-radius: 4px;
+  }
+
+  .row_posterLarge {
+    max-height: 150px;
+  }
+}

@@ -1,0 +1,503 @@
+/* ==============================
+   HEADER - DEFAULT TRANSPARENT
+============================== */
+
+.header_outer_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;
+  color: white;
+
+  box-shadow: none;
+  border-bottom: 1px solid transparent;
+
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Black background when the user scrolls */
+
+.header_outer_container.scrolled {
+  background: rgba(17, 17, 17, 0.98);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================
+   HEADER CONTENT
+============================== */
+
+.header_container {
+  min-height: 72px;
+  width: 100%;
+  padding: 0 4%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header_left,
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_left {
+  gap: 30px;
+  min-width: 0;
+}
+
+.header_right {
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* ==============================
+   NETFLIX LOGO
+============================== */
+
+.brand_link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header_logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ==============================
+   NAVIGATION LINKS
+============================== */
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav_links a,
+.login_link {
+  color: #e5e5e5;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav_links a:hover,
+.nav_links a:focus,
+.login_link:hover {
+  color: #ffffff;
+}
+
+/* ==============================
+   SEARCH FORM
+============================== */
+
+.search_form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 5px 8px 5px 14px;
+
+  background: #e50914;
+  border: 1px solid #e50914;
+  border-radius: 24px;
+
+  box-shadow: 0 3px 12px rgba(229, 9, 20, 0.18);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search_form:focus-within {
+  background: #c90812;
+  border-color: #ff4b55;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.22);
+}
+
+.search_form input {
+  width: 145px;
+  padding: 5px 0;
+
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+}
+
+.search_form input::placeholder {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.search_form .search_button,
+.search_form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  padding: 0;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.search_form .search_button:hover,
+.search_form button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* Material UI icons inside the search button */
+
+.search_form svg {
+  font-size: 22px;
+}
+
+/* ==============================
+   PROFILE / LOGIN BUTTON
+============================== */
+
+.header_right .login_link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 15px;
+
+  border: 1px solid #555555;
+  border-radius: 22px;
+
+  background: #242424;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header_right .login_link svg {
+  flex-shrink: 0;
+  font-size: 21px;
+}
+
+.header_right .login_link:hover {
+  background: #e50914;
+  border-color: #e50914;
+  color: #ffffff;
+
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   LOGOUT BUTTON
+============================== */
+
+.header_right .logout_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+  padding: 0 16px;
+
+  border: 1px solid #e50914;
+  border-radius: 22px;
+
+  background: #e50914;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header_right .logout_button:hover {
+  background: #b80710;
+  border-color: #b80710;
+
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   NOTIFICATION ICON
+============================== */
+
+.notification_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.notification_button svg {
+  font-size: 25px;
+}
+
+.notification_button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5e5e5;
+}
+
+/* ==============================
+   MOBILE MENU BUTTON
+============================== */
+
+.mobile_menu_button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 1000px) {
+  .header_container {
+    padding: 0 3%;
+    gap: 12px;
+  }
+
+  .header_left {
+    gap: 18px;
+  }
+
+  .nav_links {
+    gap: 13px;
+  }
+
+  .nav_links a,
+  .login_link {
+    font-size: 13px;
+  }
+
+  .search_form input {
+    width: 100px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 760px) {
+  .header_container {
+    min-height: 66px;
+    padding: 0 4%;
+    gap: 10px;
+  }
+
+  .header_left {
+    gap: 12px;
+  }
+
+  .header_logo {
+    width: 82px;
+  }
+
+  .mobile_menu_button {
+    display: inline-flex;
+  }
+
+  .nav_links {
+    display: none;
+
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+
+    padding: 10px 5% 16px;
+
+    background: #181818;
+    border-top: 1px solid #333333;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .nav_links.mobile_open {
+    display: flex;
+  }
+
+  .nav_links a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0;
+  }
+
+  .header_right {
+    gap: 8px;
+  }
+
+  .search_form {
+    gap: 4px;
+    padding: 4px 5px 4px 9px;
+  }
+
+  .search_form input {
+    width: 85px;
+  }
+
+  .search_form .search_button,
+  .search_form button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header_right .login_link,
+  .header_right .logout_button {
+    min-height: 35px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .header_right .login_link {
+    gap: 5px;
+  }
+
+  .notification_button {
+    width: 32px;
+    height: 35px;
+  }
+
+  .notification_button svg {
+    font-size: 22px;
+  }
+}
+
+/* ==============================
+   SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 420px) {
+  .header_container {
+    gap: 6px;
+    padding: 0 3%;
+  }
+
+  .header_left {
+    gap: 7px;
+  }
+
+  .header_logo {
+    width: 68px;
+  }
+
+  .header_right {
+    gap: 5px;
+  }
+
+  .search_form {
+    gap: 2px;
+    padding: 3px 4px 3px 7px;
+  }
+
+  .search_form input {
+    width: 65px;
+    font-size: 12px;
+  }
+
+  .search_form .search_button,
+  .search_form button {
+    width: 27px;
+    height: 27px;
+  }
+
+  .header_right .login_link,
+  .header_right .logout_button {
+    min-height: 32px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .header_right .login_link svg {
+    font-size: 18px;
+  }
+
+  .notification_button {
+    width: 27px;
+    height: 32px;
+  }
+
+  .notification_button svg {
+    font-size: 20px;
+  }
+}

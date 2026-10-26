@@ -1,0 +1,93 @@
+.footer_outer_container {
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.footer_inner_container {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Social Icons */
+.footer_icons {
+  display: flex;
+  gap: 20px;
+  color: #ccc;
+  font-size: 26px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.footer_icons svg {
+  transition: color 0.3s ease;
+}
+
+.footer_icons svg:hover {
+  color: #ffcc00;
+}
+
+/* Footer Links Section */
+.footer_data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer_data ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.footer_data ul li {
+  margin: 8px 0;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.footer_data ul li:hover {
+  color: #ffcc00;
+}
+
+/* Service Code Button */
+.service_code {
+  width: 140px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.service_code:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Copyright */
+.copy_write {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer_data {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

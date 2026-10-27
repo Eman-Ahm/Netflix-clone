@@ -50,7 +50,9 @@ function Footer() {
         <div className="service_code">Service Code</div>
 
         {/* Copyright */}
-        <p className="copy_write">© 2025 MovieApp • All Rights Reserved</p>
+        <p className="copy_write">
+          © {new Date().getFullYear()} Netflix Clone • For educational purposes
+        </p>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
 ========================= */
 
 .banner {
+  isolation: isolate;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,37 @@
 
   /* Space before the movie sections */
   margin-bottom: 42px;
+}
+
+/* =========================
+   DARK GRADIENT OVERLAY
+========================= */
+
+.banner_overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.58) 40%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+}
+
+/* =========================
+   FEATURED LABEL
+========================= */
+
+.banner_label {
+  margin: 0 0 12px;
+
+  color: #e50914;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 /* =========================
@@ -97,6 +129,11 @@
 
 .banner_button:active {
   transform: scale(0.97);
+}
+
+.banner_button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .banner_button.play {
@@ -178,6 +215,11 @@
     margin-bottom: 16px;
   }
 
+  .banner_label {
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+  }
+
   .banner_buttons {
     gap: 10px;
     margin-bottom: 18px;
@@ -219,6 +261,11 @@
     font-size: 1.8rem;
     line-height: 1.2;
     margin-bottom: 14px;
+  }
+
+  .banner_label {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 
   .banner_buttons {
